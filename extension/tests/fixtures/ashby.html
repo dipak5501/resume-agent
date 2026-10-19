@@ -1,0 +1,30 @@
+<!-- Ashby (jobs.ashbyhq.com) application form. Captured from a real posting:
+     stable `_systemfield_*` ids, `<label for>` association, custom questions
+     keyed by uuid, a top "autofill from résumé" anonymous file dropzone, and a
+     hidden g-recaptcha-response textarea. -->
+<form>
+  <!-- Ashby "drag or upload your résumé to autofill" — anonymous file input.
+       Must NOT be treated as the résumé field (it would run Ashby's parser). -->
+  <div class="_dropzone"><input type="file" /></div>
+
+  <div data-field-path="_systemfield_name">
+    <label for="_systemfield_name">Name</label>
+    <div><input placeholder="Type here..." name="_systemfield_name" required id="_systemfield_name" type="text" /></div>
+  </div>
+  <div data-field-path="_systemfield_email">
+    <label for="_systemfield_email">Email</label>
+    <div><input placeholder="hello@example.com" name="_systemfield_email" required id="_systemfield_email" type="email" /></div>
+  </div>
+  <div data-field-path="_systemfield_resume">
+    <label for="_systemfield_resume">Resume</label>
+    <div><input name="_systemfield_resume" required id="_systemfield_resume" type="file" /></div>
+  </div>
+  <div data-field-path="62bc26b7-fdcb-43a1-97bf-85aa15c69a4e">
+    <label for="62bc26b7-fdcb-43a1-97bf-85aa15c69a4e">LinkedIn profile URL</label>
+    <div><input name="62bc26b7-fdcb-43a1-97bf-85aa15c69a4e" required id="62bc26b7-fdcb-43a1-97bf-85aa15c69a4e" type="text" /></div>
+  </div>
+
+  <!-- reCAPTCHA response field (real name; real Ashby hides it). Never fill. -->
+  <textarea id="g-recaptcha-response-100000" name="g-recaptcha-response"></textarea>
+  <button type="submit">Submit Application</button>
+</form>

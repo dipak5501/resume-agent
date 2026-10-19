@@ -1,0 +1,6 @@
+{
+  "jobs": [
+    {"id": "other-000", "title": "Recruiter", "location": "Remote", "descriptionPlain": "Hire people."},
+    {"id": "aaa-111", "title": "ML Engineer", "location": "Remote", "jobUrl": "https://jobs.ashbyhq.com/acme/aaa-111", "applyUrl": "https://jobs.ashbyhq.com/acme/aaa-111/application", "descriptionPlain": "Train and deploy ML models. PyTorch, MLOps, feature stores."}
+  ]
+}

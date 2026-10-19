@@ -1,0 +1,27 @@
+[project]
+name = "resume-agent-backend"
+version = "0.1.0"
+description = "Resume Agent backend (FastAPI)"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+    "pymupdf>=1.24",
+    "ollama>=0.5",
+    "python-multipart>=0.0.9",
+    "httpx>=0.27",           # JD fetch (T10) + starlette TestClient
+    "trafilatura>=1.12",     # generic JD extraction (T10): strips nav/footer
+    "sqlalchemy>=2.0",       # profile + résumé library (T11): SQLite now, Postgres by URL later
+    "python-dotenv>=1.0",    # auto-load backend/.env (OLLAMA_API_KEY etc.); already ships via uvicorn[standard]
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+pythonpath = ["."]

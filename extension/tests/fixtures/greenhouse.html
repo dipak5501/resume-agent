@@ -1,0 +1,79 @@
+<!-- Representative Greenhouse (job-boards.greenhouse.io) application form.
+     Hand-authored from the known DOM shape; replace with a real capture if the
+     manual Chrome verify surfaces a field the detector misses. -->
+<main>
+  <h1>Apply for this job</h1>
+  <form id="application-form">
+    <div class="field">
+      <label for="first_name">First Name <span class="req">*</span></label>
+      <input type="text" id="first_name" name="first_name" autocomplete="given-name" required />
+    </div>
+    <div class="field">
+      <label for="last_name">Last Name *</label>
+      <input type="text" id="last_name" name="last_name" autocomplete="family-name" required />
+    </div>
+    <div class="field">
+      <label for="email">Email *</label>
+      <input type="email" id="email" name="email" autocomplete="email" required />
+    </div>
+    <div class="field">
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone" autocomplete="tel" />
+    </div>
+    <div class="field">
+      <label for="resume">Resume/CV *</label>
+      <input type="file" id="resume" name="resume" required />
+    </div>
+    <div class="field">
+      <label for="cover_letter">Cover Letter</label>
+      <input type="file" id="cover_letter" name="cover_letter" />
+    </div>
+    <div class="field">
+      <label for="q_linkedin">LinkedIn Profile</label>
+      <input type="text" id="q_linkedin" name="job_application[answers_attributes][0][text_value]" />
+    </div>
+    <div class="field">
+      <label for="q_experience">How many total years of experience do you have?</label>
+      <input type="text" id="q_experience" name="job_application[answers_attributes][1][text_value]" />
+    </div>
+    <div class="field">
+      <label for="q_why">Why do you want to work here?</label>
+      <textarea id="q_why" name="job_application[answers_attributes][2][text_value]"></textarea>
+    </div>
+
+    <!-- REAL CAPTURE, 2026-09-22, from job-boards.greenhouse.io/discord/jobs/8806163002
+         (education_config: school_name/degree/discipline = "optional"). Greenhouse renders
+         NO native <select> anywhere on the form - every dropdown is a react-select
+         `<input type=text role=combobox>`. That is why a raw free-text write leaves
+         VISIBLE prose in the field instead of blanking it. Only the long emotion inline
+         style is trimmed; every attribute below is verbatim from the live page. -->
+    <div class="field">
+      <label id="school--0-label" for="school--0" class="label select__label">School</label>
+      <input class="select__input" style="opacity:1" autoCapitalize="none" autoComplete="off"
+        autoCorrect="off" id="school--0" spellcheck="false" tabindex="0" type="text"
+        aria-autocomplete="list" aria-expanded="false" aria-haspopup="true"
+        aria-errormessage="school--0-error" aria-invalid="false" aria-labelledby="school--0-label"
+        aria-required="false" role="combobox" aria-activedescendant=""
+        aria-describedby="react-select-school--0-placeholder" value="" />
+    </div>
+    <div class="field">
+      <label id="degree--0-label" for="degree--0" class="label select__label">Degree</label>
+      <input class="select__input" style="opacity:1" autoCapitalize="none" autoComplete="off"
+        autoCorrect="off" id="degree--0" spellcheck="false" tabindex="0" type="text"
+        aria-autocomplete="list" aria-expanded="false" aria-haspopup="true"
+        aria-errormessage="degree--0-error" aria-invalid="false" aria-labelledby="degree--0-label"
+        aria-required="false" role="combobox" aria-activedescendant=""
+        aria-describedby="react-select-degree--0-placeholder" value="" />
+    </div>
+    <div class="field">
+      <label id="discipline--0-label" for="discipline--0" class="label select__label">Discipline</label>
+      <input class="select__input" style="opacity:1" autoCapitalize="none" autoComplete="off"
+        autoCorrect="off" id="discipline--0" spellcheck="false" tabindex="0" type="text"
+        aria-autocomplete="list" aria-expanded="false" aria-haspopup="true"
+        aria-errormessage="discipline--0-error" aria-invalid="false"
+        aria-labelledby="discipline--0-label" aria-required="false" role="combobox"
+        aria-activedescendant="" aria-describedby="react-select-discipline--0-placeholder" value="" />
+    </div>
+    <button type="submit">Submit Application</button>
+  </form>
+</main>

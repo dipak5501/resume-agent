@@ -1,0 +1,24 @@
+Senior Backend / Platform Engineer (DevOps)
+
+About the role
+We are hiring a backend platform engineer to own the reliability and scale of our
+microservices platform. You will design services, harden our CI/CD pipelines, and
+run our container orchestration in production.
+
+Responsibilities
+- Design and operate microservices and REST/gRPC APIs handling high traffic.
+- Own our Kubernetes clusters and Docker-based build/deploy workflows.
+- Manage cloud infrastructure as code with Terraform on AWS.
+- Build and maintain CI/CD pipelines (automated test, build, deploy).
+- Improve observability, on-call, and incident response.
+
+Required qualifications
+- 3+ years building backend services in Go, Python, or Java.
+- Strong experience with Kubernetes and Docker in production.
+- Hands-on Terraform and AWS (EC2, S3, IAM, EKS).
+- Experience designing and scaling PostgreSQL and event streaming (Kafka).
+- Solid CI/CD and Linux fundamentals.
+
+Nice to have
+- Experience with gRPC and service meshes.
+- Exposure to machine learning platforms.

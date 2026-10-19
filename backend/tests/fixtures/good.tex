@@ -1,0 +1,148 @@
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage[usenames,dvipsnames]{color}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\newcommand{\resumeItem}[1]{\item\small{#1\vspace{-2pt}}}
+\newcommand{\resumeSubheading}[4]{\vspace{-2pt}\item
+  \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textbf{\small #2} \\
+    \textit{\small#3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-7pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\huge \scshape Kashif Manzer} \\ \vspace{2pt}
+    \small 562-737-0188 $|$
+    \href{mailto:kmanzer3@gmail.com}{\underline{kmanzer3@gmail.com}} $|$
+    \href{https://linkedin.com/in/kashif-manzer}{\underline{linkedin.com/in/kashif-manzer}} $|$
+    \href{https://github.com/KashifManzer}{\underline{github.com/KashifManzer}}
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Professional Summary}
+\small{
+Backend/Platform Software Engineer with 3+ years building scalable microservices, APIs, cloud automation, and data infrastructure. Strong in \textbf{Go, Python, C/C++, Java, Linux, AWS, GCP, Azure, Docker, Kubernetes, CI/CD, networking fundamentals}, and AI/ML-enabled platform automation.
+}
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {California State University, Long Beach}{Expected Dec 2026}
+    {Master of Science in Computer Science}{Long Beach, CA}
+    \resumeItemListStart
+      \resumeItem{\textbf{Relevant Coursework:} Distributed Systems, Computer Networks, Operating Systems, Cloud Computing, Machine Learning, Algorithms, Software Engineering.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Viasat}{May 2026 -- Present}
+    {Software Engineer Intern}{Carlsbad, CA}
+    \resumeItemListStart
+      \resumeItem{Developing an AI-driven backend automation agent in \textbf{Python} with \textbf{Google Agent Development Kit} to orchestrate content pre-warming workflows for distributed in-flight entertainment caching systems.}
+      \resumeItem{Built \textbf{GCP Cloud Run} services with REST-style triggers, job orchestration, Terraform, Argo CD, and Grafana, reducing active developer effort per request from $\sim$1 hour to 5 minutes.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Institutional Research \& Analytics, CSU}{May 2025 -- May 2026}
+    {Software Engineer}{Long Beach, CA}
+    \resumeItemListStart
+      \resumeItem{Designed backend data infrastructure in \textbf{Go} and \textbf{Python} for analytics pipelines handling ingestion, validation, transformation, and reporting across distributed university systems.}
+      \resumeItem{Implemented automation, testing, and monitoring workflows with Docker, Kubernetes, Linux, Prometheus, and Grafana, reducing manual data reconciliation by 70\%.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {SettleMint India Services Pvt Ltd}{Aug 2021 -- Jan 2025}
+    {Software Engineer, Backend \& Infrastructure}{New Delhi, India}
+    \resumeItemListStart
+      \resumeItem{Designed scalable backend microservices and APIs in \textbf{Go} and \textbf{Python} for high-throughput financial network platforms supporting 100M+ end users.}
+      \resumeItem{Built event-driven data pipelines with \textbf{Kafka} and \textbf{Redis} for asynchronous processing, low-latency caching, and reliable distributed workflow execution.}
+      \resumeItem{Deployed production services across \textbf{AWS} and \textbf{GCP} using Terraform, Docker, Kubernetes, Linux, and CI/CD; improved platform reliability by 35\%.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \item \small{
+    \textbf{Languages:} Go, Python, C/C++, Java, JavaScript, TypeScript, SQL, Bash, Rust \\
+    \textbf{Backend \& Platform:} Microservices, REST APIs, API Design, Distributed Systems, Data Pipelines, Analytics Platforms \\
+    \textbf{Cloud \& Infrastructure:} AWS, GCP, Azure, Terraform, Cloud Run, Docker, Kubernetes, Linux \\
+    \textbf{Networking:} TCP/IP, DNS, DHCP, BGP, VLANs, Load Balancing, Network Protocols, Troubleshooting \\
+    \textbf{AI/ML, Testing \& DevOps:} AI Agents, Machine Learning Fundamentals, pytest/pyTest, Unit Testing, CI/CD, GitHub Actions, Jenkins, Argo CD, Prometheus, Grafana \\
+    \textbf{Data \& Messaging:} PostgreSQL, MongoDB, MySQL, Redis, Kafka, JSON, YAML, Git, GitHub
+  }
+\end{itemize}
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {CloudNet Control Plane: Network Automation \& API Platform}{}
+    {Go, Python, Terraform, AWS, Docker, pytest, Prometheus}{ }
+    \resumeItemListStart
+      \resumeItem{Built Go microservices and REST APIs to provision virtual network resources, manage DNS/DHCP-style metadata, validate TCP/IP connectivity, and model BGP/VLAN configuration workflows across AWS.}
+      \resumeItem{Implemented Terraform modules, pytest automation, structured JSON logs, and Prometheus metrics, reducing network troubleshooting time by 50\%.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {OmniAgent: AI-Driven Governance Platform for DAOs}{}
+    {Next.js, Flask, PostgreSQL, GPT-4 API, Kubernetes, CI/CD}{ }
+    \resumeItemListStart
+      \resumeItem{Developed Python backend APIs with Flask, PostgreSQL, caching, job scheduling, AI-assisted automation, Kubernetes deployment, and GitHub Actions CI/CD.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------ACHIEVEMENTS-----------
+\section{Achievements}
+\resumeSubHeadingListStart
+  \resumeItem{1st Prize, Partner Prize -- ETH Global Hackathon, New York, 2025.}
+  \resumeItem{Rising Developer of the Year, 2023 and 2024; Linux Foundation Certified Rust Developer, 2024.}
+\resumeSubHeadingListEnd
+
+\end{document}
+

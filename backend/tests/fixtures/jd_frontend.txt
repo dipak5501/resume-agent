@@ -1,0 +1,22 @@
+Senior Frontend Engineer (React)
+
+About the role
+We are building a design-forward web product and need a frontend engineer to own
+our single-page application and component library.
+
+Responsibilities
+- Build and maintain a large React + TypeScript single-page application.
+- Own our design system and reusable component library (Storybook).
+- Ensure accessibility (WCAG) and responsive design across devices.
+- Optimize front-end performance: bundle size, lazy loading, Core Web Vitals.
+
+Required qualifications
+- 4+ years of professional frontend development.
+- Expert in React, Redux, and TypeScript.
+- Strong CSS: Tailwind CSS or Sass, responsive layouts, cross-browser support.
+- Experience with a modern build toolchain (Vite or Webpack) and Jest testing.
+- Consuming REST/GraphQL APIs from the browser.
+
+Nice to have
+- Next.js server-side rendering.
+- Figma and close collaboration with designers.

@@ -1,0 +1,50 @@
+# python
+__pycache__/
+*.pyc
+.venv/
+backend/.venv/
+
+# node
+node_modules/
+frontend/dist/
+dist/
+
+# test / build caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# env / secrets
+.env
+.env.local
+.env.*.local
+
+# os / editor
+.DS_Store
+.idea/
+.vscode/
+
+# third-party clone (spike, not vendored)
+external/
+
+# user data: SQLite DB + uploaded résumé files (T11) — never commit
+backend/data/
+# stray SQLite files outside data/ (a wrong-path script once created backend/resume.db)
+*.db
+
+# local working tickets (for us, not shared)
+docs/tickets/
+
+# magnum-memory (personal/local — never commit)
+.claude/memory/
+
+# vendored hiring-agent: track the source, ignore its runtime artifacts
+vendor/hiring-agent/.venv/
+vendor/hiring-agent/cache/
+vendor/hiring-agent/resume_evaluations.csv
+vendor/hiring-agent/*.log
+
+# Local application tracking (Save locally) — never committed
+/tailored-resume/

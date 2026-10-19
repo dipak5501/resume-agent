@@ -1,0 +1,62 @@
+Kashif Manzer
+562-737-0188 | kmanzer3@gmail.com | linkedin.com/in/kashif-manzer | github.com/KashifManzer
+Professional Summary
+Backend/Platform Software Engineer with 3+ years building scalable microservices, APIs, cloud automation, and data infrastructure.
+Strong in Go, Python, C/C++, Java, Linux, AWS, GCP, Azure, Docker, Kubernetes, CI/CD, networking fundamentals,
+and AI/ML-enabled platform automation.
+Education
+California State University, Long Beach
+Expected Dec 2026
+Master of Science in Computer Science
+Long Beach, CA
+– Relevant Coursework: Distributed Systems, Computer Networks, Operating Systems, Cloud Computing, Machine Learning,
+Algorithms, Software Engineering.
+Experience
+Viasat
+May 2026 – Present
+Software Engineer Intern
+Carlsbad, CA
+– Developing an AI-driven backend automation agent in Python with Google Agent Development Kit to orchestrate content
+pre-warming workflows for distributed in-flight entertainment caching systems.
+– Built GCP Cloud Run services with REST-style triggers, job orchestration, Terraform, Argo CD, and Grafana, reducing active
+developer effort per request from ∼1 hour to 5 minutes.
+Institutional Research & Analytics, CSU
+May 2025 – May 2026
+Software Engineer
+Long Beach, CA
+– Designed backend data infrastructure in Go and Python for analytics pipelines handling ingestion, validation, transformation, and
+reporting across distributed university systems.
+– Implemented automation, testing, and monitoring workflows with Docker, Kubernetes, Linux, Prometheus, and Grafana, reducing
+manual data reconciliation by 70%.
+SettleMint India Services Pvt Ltd
+Aug 2021 – Jan 2025
+Software Engineer, Backend & Infrastructure
+New Delhi, India
+– Designed scalable backend microservices and APIs in Go and Python for high-throughput financial network platforms supporting
+100M+ end users.
+– Built event-driven data pipelines with Kafka and Redis for asynchronous processing, low-latency caching, and reliable distributed
+workflow execution.
+– Deployed production services across AWS and GCP using Terraform, Docker, Kubernetes, Linux, and CI/CD; improved platform
+reliability by 35%.
+Technical Skills
+Languages: Go, Python, C/C++, Java, JavaScript, TypeScript, SQL, Bash, Rust
+Backend & Platform: Microservices, REST APIs, API Design, Distributed Systems, Data Pipelines, Analytics Platforms
+Cloud & Infrastructure: AWS, GCP, Azure, Terraform, Cloud Run, Docker, Kubernetes, Linux
+Networking: TCP/IP, DNS, DHCP, BGP, VLANs, Load Balancing, Network Protocols, Troubleshooting
+AI/ML, Testing & DevOps: AI Agents, Machine Learning Fundamentals, pytest/pyTest, Unit Testing, CI/CD, GitHub Actions,
+Jenkins, Argo CD, Prometheus, Grafana
+Data & Messaging: PostgreSQL, MongoDB, MySQL, Redis, Kafka, JSON, YAML, Git, GitHub
+Projects
+CloudNet Control Plane: Network Automation & API Platform
+Go, Python, Terraform, AWS, Docker, pytest, Prometheus
+– Built Go microservices and REST APIs to provision virtual network resources, manage DNS/DHCP-style metadata, validate TCP/IP
+connectivity, and model BGP/VLAN configuration workflows across AWS.
+– Implemented Terraform modules, pytest automation, structured JSON logs, and Prometheus metrics, reducing network
+troubleshooting time by 50%.
+OmniAgent: AI-Driven Governance Platform for DAOs
+Next.js, Flask, PostgreSQL, GPT-4 API, Kubernetes, CI/CD
+– Developed Python backend APIs with Flask, PostgreSQL, caching, job scheduling, AI-assisted automation, Kubernetes deployment,
+and GitHub Actions CI/CD.
+Achievements
+1st Prize, Partner Prize – ETH Global Hackathon, New York, 2025.
+Rising Developer of the Year, 2023 and 2024; Linux Foundation Certified Rust Developer, 2024.

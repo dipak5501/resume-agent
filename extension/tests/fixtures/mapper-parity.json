@@ -1,0 +1,358 @@
+[
+  {
+    "note": "ac given-name",
+    "expected": "first_name",
+    "descriptor": {
+      "field_ref": 1,
+      "tag": "input",
+      "type": "text",
+      "autocomplete": "given-name",
+      "label": "First"
+    }
+  },
+  {
+    "note": "ac family-name",
+    "expected": "last_name",
+    "descriptor": {
+      "field_ref": 2,
+      "tag": "input",
+      "type": "text",
+      "autocomplete": "family-name",
+      "label": "Last"
+    }
+  },
+  {
+    "note": "label First Name",
+    "expected": "first_name",
+    "descriptor": {
+      "field_ref": 3,
+      "tag": "input",
+      "type": "text",
+      "name": "first_name",
+      "label": "First Name"
+    }
+  },
+  {
+    "note": "label Last Name",
+    "expected": "last_name",
+    "descriptor": {
+      "field_ref": 4,
+      "tag": "input",
+      "type": "text",
+      "name": "last_name",
+      "label": "Last Name"
+    }
+  },
+  {
+    "note": "fname short",
+    "expected": "first_name",
+    "descriptor": {
+      "field_ref": 5,
+      "tag": "input",
+      "type": "text",
+      "name": "fname",
+      "label": "fname"
+    }
+  },
+  {
+    "note": "lname short",
+    "expected": "last_name",
+    "descriptor": {
+      "field_ref": 6,
+      "tag": "input",
+      "type": "text",
+      "name": "lname",
+      "label": "lname"
+    }
+  },
+  {
+    "note": "E-mail label",
+    "expected": "email",
+    "descriptor": {
+      "field_ref": 7,
+      "tag": "input",
+      "type": "text",
+      "label": "E-mail"
+    }
+  },
+  {
+    "note": "type email",
+    "expected": "email",
+    "descriptor": {
+      "field_ref": 8,
+      "tag": "input",
+      "type": "email"
+    }
+  },
+  {
+    "note": "Phone",
+    "expected": "phone",
+    "descriptor": {
+      "field_ref": 9,
+      "tag": "input",
+      "type": "text",
+      "label": "Phone Number"
+    }
+  },
+  {
+    "note": "type tel",
+    "expected": "phone",
+    "descriptor": {
+      "field_ref": 10,
+      "tag": "input",
+      "type": "tel"
+    }
+  },
+  {
+    "note": "LinkedIn",
+    "expected": "linkedin",
+    "descriptor": {
+      "field_ref": 11,
+      "tag": "input",
+      "type": "text",
+      "label": "LinkedIn URL"
+    }
+  },
+  {
+    "note": "GitHub",
+    "expected": "github",
+    "descriptor": {
+      "field_ref": 12,
+      "tag": "input",
+      "type": "text",
+      "label": "GitHub"
+    }
+  },
+  {
+    "note": "Portfolio",
+    "expected": "portfolio",
+    "descriptor": {
+      "field_ref": 13,
+      "tag": "input",
+      "type": "text",
+      "label": "Portfolio"
+    }
+  },
+  {
+    "note": "Blog/website",
+    "expected": "website",
+    "descriptor": {
+      "field_ref": 14,
+      "tag": "input",
+      "type": "text",
+      "label": "Personal Blog"
+    }
+  },
+  {
+    "note": "authorized to work",
+    "expected": "work_authorization",
+    "descriptor": {
+      "field_ref": 15,
+      "tag": "select",
+      "type": "select-one",
+      "label": "Are you authorized to work in the US?"
+    }
+  },
+  {
+    "note": "legally allowed to work",
+    "expected": "work_authorization",
+    "descriptor": {
+      "field_ref": 16,
+      "tag": "select",
+      "type": "select-one",
+      "label": "Are you legally allowed to work here?"
+    }
+  },
+  {
+    "note": "years experience",
+    "expected": "years_experience",
+    "descriptor": {
+      "field_ref": 17,
+      "tag": "input",
+      "type": "text",
+      "label": "Years of experience"
+    }
+  },
+  {
+    "note": "cover letter text",
+    "expected": "cover_letter",
+    "descriptor": {
+      "field_ref": 18,
+      "tag": "textarea",
+      "label": "Cover Letter"
+    }
+  },
+  {
+    "note": "City",
+    "expected": "location",
+    "descriptor": {
+      "field_ref": 19,
+      "tag": "input",
+      "type": "text",
+      "label": "City"
+    }
+  },
+  {
+    "note": "where located",
+    "expected": "location",
+    "descriptor": {
+      "field_ref": 20,
+      "tag": "input",
+      "type": "text",
+      "label": "Where are you located?"
+    }
+  },
+  {
+    "note": "Full Name",
+    "expected": "full_name",
+    "descriptor": {
+      "field_ref": 21,
+      "tag": "input",
+      "type": "text",
+      "label": "Full Name"
+    }
+  },
+  {
+    "note": "bare Name",
+    "expected": "full_name",
+    "descriptor": {
+      "field_ref": 22,
+      "tag": "input",
+      "type": "text",
+      "name": "name",
+      "label": "Name"
+    }
+  },
+  {
+    "note": "applicant name",
+    "expected": "full_name",
+    "descriptor": {
+      "field_ref": 23,
+      "tag": "input",
+      "type": "text",
+      "label": "Applicant Name"
+    }
+  },
+  {
+    "note": "workday firstName aid",
+    "expected": "first_name",
+    "descriptor": {
+      "field_ref": 24,
+      "tag": "input",
+      "type": "text",
+      "data_automation_id": "legalNameSection_firstName"
+    }
+  },
+  {
+    "note": "workday city aid",
+    "expected": "location",
+    "descriptor": {
+      "field_ref": 25,
+      "tag": "input",
+      "type": "text",
+      "data_automation_id": "addressSection_city"
+    }
+  },
+  {
+    "note": "file resume",
+    "expected": "resume_upload",
+    "descriptor": {
+      "field_ref": 26,
+      "tag": "input",
+      "type": "file",
+      "name": "resume",
+      "id": "resume",
+      "label": "Resume"
+    }
+  },
+  {
+    "note": "file cover",
+    "expected": "cover_letter",
+    "descriptor": {
+      "field_ref": 27,
+      "tag": "input",
+      "type": "file",
+      "name": "cover",
+      "id": "coverLetter",
+      "label": "Cover Letter"
+    }
+  },
+  {
+    "note": "file id no keyword",
+    "expected": "unknown",
+    "descriptor": {
+      "field_ref": 28,
+      "tag": "input",
+      "type": "file",
+      "id": "fileUpload123",
+      "label": "Attach a document"
+    }
+  },
+  {
+    "note": "file anonymous",
+    "expected": "unknown",
+    "descriptor": {
+      "field_ref": 29,
+      "tag": "input",
+      "type": "file"
+    }
+  },
+  {
+    "note": "generic textarea",
+    "expected": "free_text",
+    "descriptor": {
+      "field_ref": 30,
+      "tag": "textarea",
+      "name": "q1",
+      "id": "q1",
+      "label": "Why do you want this job?"
+    }
+  },
+  {
+    "note": "generic text unknown",
+    "expected": "unknown",
+    "descriptor": {
+      "field_ref": 31,
+      "tag": "input",
+      "type": "text",
+      "name": "salary",
+      "id": "salary",
+      "label": "Desired salary"
+    }
+  },
+  {
+    "note": "curriculum vitae file",
+    "expected": "resume_upload",
+    "descriptor": {
+      "field_ref": 32,
+      "tag": "input",
+      "type": "file",
+      "label": "Upload your curriculum vitae"
+    }
+  },
+  {
+    "note": "postal code -> address (not location)",
+    "expected": "address",
+    "descriptor": { "field_ref": 33, "tag": "input", "type": "text", "label": "Postal Code" }
+  },
+  {
+    "note": "address line 1 -> address (not location)",
+    "expected": "address",
+    "descriptor": { "field_ref": 34, "tag": "input", "type": "text", "label": "Address Line 1" }
+  },
+  {
+    "note": "state -> address",
+    "expected": "address",
+    "descriptor": { "field_ref": 35, "tag": "input", "type": "text", "label": "State" }
+  },
+  {
+    "note": "country -> address",
+    "expected": "address",
+    "descriptor": { "field_ref": 36, "tag": "input", "type": "text", "label": "Country" }
+  },
+  {
+    "note": "city still -> location (coarse location, kept)",
+    "expected": "location",
+    "descriptor": { "field_ref": 37, "tag": "input", "type": "text", "label": "City" }
+  }
+]

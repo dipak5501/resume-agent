@@ -1,0 +1,7 @@
+{
+  "title": "Data Engineer",
+  "location": {"name": "Remote - US"},
+  "company_name": "Acme",
+  "absolute_url": "https://job-boards.greenhouse.io/acme/jobs/456",
+  "content": "&lt;p&gt;Build data pipelines with &lt;strong&gt;Spark&lt;/strong&gt; and Airflow.&lt;/p&gt;&lt;p&gt;Requirements: SQL, Python.&lt;/p&gt;"
+}

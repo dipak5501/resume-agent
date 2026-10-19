@@ -1,0 +1,29 @@
+/* Proofing-desk design tokens (T15) — the small shared palette + type that
+   brings the extension into the web app's language. Imported by the popup AND
+   inlined into the on-page Shadow-DOM proof layer, so both speak one voice.
+   :host makes the vars resolve inside a shadow root; :root inside the popup doc.
+   All names are --ra-* so they can't collide with a host page's own variables. */
+:root,
+:host {
+  --ra-desk: #191308;
+  --ra-desk-2: #221a0e;
+  --ra-paper: #f2e8cf;
+  --ra-paper-edge: #e1d3b2;
+  --ra-ink: #211a10;
+  --ra-ink-soft: #6b5f4b;
+  --ra-cream: #efe4c9;
+  --ra-cream-soft: #ab9c7f;
+  --ra-marigold: #f3b41f;
+  --ra-accent-ink: #93600c;
+  --ra-highlight: #f0c33f;
+  --ra-gap: #c04631;
+  --ra-gap-hi: #e07050;
+  --ra-ok: #6bbf7b;
+  --ra-line: rgba(239, 228, 201, 0.14);
+  --ra-paper-line: rgba(33, 26, 16, 0.16);
+
+  --ra-font-display: 'Fraunces', 'Fraunces Variable', Georgia, 'Times New Roman', serif;
+  --ra-font-body: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --ra-font-mono: 'JetBrains Mono', 'JetBrains Mono Variable', ui-monospace, 'SF Mono', Menlo, monospace;
+  --ra-radius: 8px;
+}

@@ -1,0 +1,15 @@
+Backend Engineer — Rust / Elixir Platform
+
+About the role
+We build our high-throughput trading platform in Rust and Elixir. You will write
+low-latency services and own concurrency-heavy subsystems.
+
+Required qualifications
+- 3+ years writing production Rust (ownership, async/tokio).
+- Strong Elixir/OTP experience: GenServers, supervision trees, BEAM tuning.
+- Backend fundamentals: APIs, databases, Linux.
+- Experience with high-concurrency, low-latency systems.
+
+Nice to have
+- Phoenix framework.
+- Experience with distributed consensus.

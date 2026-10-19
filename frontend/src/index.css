@@ -1,0 +1,325 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/fraunces";
+@import "@fontsource-variable/geist";
+@import "@fontsource-variable/jetbrains-mono";
+
+@custom-variant dark (&:is(.dark *));
+
+/* The Compose viewport-lock (T21). It only applies when the desk is wide enough
+   for two columns AND tall enough to hold them; on anything smaller the screen
+   falls back to natural scroll so the button is always reachable and nothing is
+   clipped (WCAG 1.4.10 reflow). One variant instead of stacking `lg:` + a height
+   query on every locked utility. */
+@custom-variant desk (@media (min-width: 64rem) and (min-height: 44rem));
+
+/* ── The typesetter's proofing desk ─────────────────────────────────────────
+   A dark espresso DESK under a warm lamp; bright cream PAPER sheets are laid on
+   it and lift off with real shadow. Type is a pairing — Fraunces for display,
+   Geist for body/UI, JetBrains Mono for labels & data. ONE marigold accent runs
+   the hero, CTAs, the score, and the highlighter marks; brick-red flags gaps and
+   the "proof approved" stamp. ──────────────────────────────────────────────── */
+@theme inline {
+  --font-sans: 'Geist Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Fraunces Variable', Georgia, serif;   /* display only */
+  --font-mono: 'JetBrains Mono Variable', ui-monospace, monospace;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* concept tokens */
+  --color-desk: var(--desk);
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-cream: var(--cream);
+  --color-cream-soft: var(--cream-soft);
+  --color-marigold: var(--marigold);
+  --color-highlight: var(--highlight);
+  --color-gap: var(--gap);
+  --color-gap-hi: var(--gap-hi);
+  /* the hairline rules — registered so `border-desk-line` / `divide-paper-line`
+     actually compile; the raw :root vars alone generate no utility. */
+  --color-desk-line: var(--desk-line);
+  --color-paper-line: var(--paper-line);
+
+  --radius-sm: calc(var(--radius) * 0.7);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) * 1.6);
+}
+
+:root {
+  /* desk (dark ground) */
+  --desk: #191308;
+  /* paper (warm sheets — ivory/manila stock, not white) */
+  --paper: #ebdfc2;
+  --paper-2: #f2e8cf;
+  --paper-edge: #e1d3b2;
+  /* ink (text on paper) */
+  --ink: #211a10;
+  --ink-soft: #6b5f4b;
+  /* cream (text on desk) */
+  --cream: #efe4c9;
+  --cream-soft: #ab9c7f;
+  /* accent family — marigold */
+  --marigold: #f3b41f; /* bright: on-desk accents, CTAs, stamps, rules */
+  --accent-ink: #93600c; /* dark: AA marigold text on cream */
+  --highlight: #f0c33f; /* highlighter swipe */
+  --gap: #c04631; /* brick red for gaps / stamp */
+  --gap-hi: #e07050; /* lighter brick for text on the dark desk */
+  --paper-line: rgba(33, 26, 16, 0.14);
+  --desk-line: rgba(239, 228, 201, 0.14);
+  /* faint paper tooth so sheets read as warm stock, not flat white cards */
+  --paper-tooth: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23p)' opacity='0.045'/%3E%3C/svg%3E");
+
+  /* depth — a lit sheet with a soft top highlight and a long desk shadow */
+  --sheet-shadow:
+    inset 0 1px 0 rgba(255, 251, 238, 0.6),
+    0 2px 4px rgba(0, 0, 0, 0.24),
+    0 26px 48px -26px rgba(0, 0, 0, 0.7);
+  --sheet-shadow-sm:
+    inset 0 1px 0 rgba(255, 251, 238, 0.5),
+    0 1px 3px rgba(0, 0, 0, 0.2),
+    0 14px 28px -20px rgba(0, 0, 0, 0.6);
+
+  --radius: 0.28rem;
+
+  --background: var(--desk);
+  --foreground: var(--cream);
+  --card: var(--paper-2);
+  --card-foreground: var(--ink);
+  --popover: var(--paper-2);
+  --popover-foreground: var(--ink);
+  --primary: var(--ink);
+  --primary-foreground: #f8f2e4;
+  --secondary: var(--paper-edge);
+  --secondary-foreground: var(--ink);
+  --muted: var(--paper-edge);
+  --muted-foreground: var(--ink-soft);
+  --accent: var(--accent-ink);
+  --accent-foreground: #f8f2e4;
+  --destructive: var(--gap);
+  --border: var(--paper-line);
+  --input: var(--paper-line);
+  --ring: var(--marigold);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/60;
+  }
+  body {
+    @apply bg-background text-foreground;
+    /* a warm desk-lamp glow from above, a settling shadow below, film grain */
+    background-color: var(--desk);
+    background-image:
+      radial-gradient(130% 80% at 50% -15%, rgba(243, 180, 31, 0.14), transparent 55%),
+      radial-gradient(120% 70% at 50% 118%, rgba(0, 0, 0, 0.55), transparent 60%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+    background-attachment: fixed;
+    font-optical-sizing: auto;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  html {
+    @apply font-sans;
+  }
+  ::selection {
+    background: var(--highlight);
+    color: var(--ink);
+  }
+}
+
+/* Concept classes live in @layer components so plain Tailwind utilities
+   (position, spacing, borders) can still override them where needed. */
+@layer components {
+  /* A sheet of warm paper on the desk: lit, textured with a faint tooth, lifting
+     off with real shadow. --paper-tooth is a fine grain so it reads as stock. */
+  .sheet,
+  .sheet-sm {
+    background-color: var(--paper-2);
+    background-image: var(--paper-tooth);
+    color: var(--ink);
+    border: 1px solid var(--paper-line);
+  }
+  .sheet {
+    border-radius: var(--radius-lg);
+    box-shadow: var(--sheet-shadow);
+  }
+  .sheet-sm {
+    border-radius: var(--radius-md);
+    box-shadow: var(--sheet-shadow-sm);
+  }
+
+  /* Onboarding step CTA — a mono action link on a cream sheet (dark marigold). */
+  .ob-cta {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: var(--accent-ink);
+    text-underline-offset: 3px;
+  }
+  .ob-cta:hover {
+    text-decoration: underline;
+  }
+
+  /* Signature: highlighter marks over keyword coverage. The ink text is always
+     visible; the highlight sweeps in under it (robust — no invisible content). */
+  .mark-hl {
+    background-image: linear-gradient(100deg, var(--highlight), var(--highlight));
+    background-repeat: no-repeat;
+    background-position: 0 55%;
+    background-size: 0% 92%;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    padding: 0.08em 0.3em;
+    border-radius: 2px;
+    animation: hl-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  .mark-gap {
+    color: var(--gap);
+    text-decoration: underline wavy var(--gap);
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1.5px;
+  }
+
+  /* The spine / index-tab nav (T14): sections read as lettered dividers in a
+     card index. The active tab is "pulled forward" — a cream paper face with a
+     marigold ink-mark on its top edge, like the folder you reached for. */
+  .tab-rail {
+    scrollbar-width: none;
+  }
+  .tab-rail::-webkit-scrollbar {
+    display: none;
+  }
+  .idx-tab {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    flex-shrink: 0;
+    padding: 0.42rem 0.9rem 0.5rem;
+    border: 1px solid transparent;
+    border-bottom: 0;
+    border-top-left-radius: var(--radius-md);
+    border-top-right-radius: var(--radius-md);
+    color: var(--cream-soft);
+    transition:
+      color 0.18s ease,
+      background-color 0.18s ease;
+  }
+  .idx-tab:hover {
+    color: var(--cream);
+    background: rgba(239, 228, 201, 0.05);
+  }
+  .idx-tab:focus-visible {
+    outline: 2px solid var(--marigold);
+    outline-offset: 2px;
+  }
+  .idx-tab[aria-current='page'] {
+    color: var(--ink);
+    background-color: var(--paper-2);
+    background-image: var(--paper-tooth);
+    border-color: var(--paper-line);
+    box-shadow: var(--sheet-shadow-sm);
+  }
+  .idx-tab[aria-current='page']::before {
+    content: '';
+    position: absolute;
+    inset: -1px 0 auto 0;
+    height: 3px;
+    background: var(--marigold);
+    border-top-left-radius: var(--radius-md);
+    border-top-right-radius: var(--radius-md);
+  }
+  .idx-tab .idx-kicker {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.28em;
+    color: var(--marigold);
+    opacity: 0.75;
+  }
+  .idx-tab[aria-current='page'] .idx-kicker {
+    color: var(--accent-ink);
+    opacity: 1;
+  }
+  .idx-tab .idx-label {
+    font-family: var(--font-serif);
+    font-size: 0.98rem;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+
+  /* "Proof approved" — a rubber-ink stamp pressed on a paper slip, the Result
+     payoff. Red ink, double ring, rotated off-square, a whisper of grain. */
+  .stamp {
+    isolation: isolate;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.1rem;
+    padding: 0.55rem 0.95rem;
+    background: var(--paper-2);
+    color: var(--gap);
+    border: 2.5px solid var(--gap);
+    border-radius: 5px;
+    box-shadow:
+      inset 0 0 0 2px var(--paper-2),
+      inset 0 0 0 3.5px var(--gap),
+      0 10px 22px -10px rgba(0, 0, 0, 0.65);
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    transform: rotate(-7deg);
+  }
+  .stamp::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 5px;
+    pointer-events: none;
+    mix-blend-mode: multiply;
+    opacity: 0.4;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cfilter id='s'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23s)'/%3E%3C/svg%3E");
+  }
+  .stamp-in {
+    animation: stamp-in 0.5s cubic-bezier(0.2, 0.85, 0.25, 1) 0.35s both;
+  }
+}
+
+@keyframes hl-in {
+  to {
+    background-size: 100% 92%;
+  }
+}
+@keyframes stamp-in {
+  0% { opacity: 0; transform: rotate(-7deg) scale(1.7); }
+  55% { opacity: 1; transform: rotate(-7deg) scale(0.9); }
+  100% { opacity: 1; transform: rotate(-7deg) scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mark-hl {
+    background-size: 100% 92%;
+    animation: none;
+  }
+  .stamp-in {
+    animation: none;
+  }
+}

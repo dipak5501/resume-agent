@@ -1,0 +1,40 @@
+<!-- Workday (*.myworkdayjobs.com) "My Information" application step.
+     CONVENTION-BASED (not a live capture): Workday apply forms sit behind
+     account creation, so this mirrors Workday's stable `data-automation-id`
+     naming (legalNameSection_firstName, email, phone-number, addressSection_*,
+     file-upload-input-ref) rather than a scraped DOM. Replace with a real
+     capture once a live Workday apply page is available — Workday's DOM is the
+     least standard of the four ATSes and must be verified against the real
+     thing (see ticket note). Inputs deliberately carry NO name/id and no
+     <label for> — only data-automation-id + aria-label, as Workday does. -->
+<div data-automation-id="applyFlow">
+  <div>
+    <label id="lbl-first">First Name</label>
+    <input type="text" aria-label="First Name" data-automation-id="legalNameSection_firstName" required />
+  </div>
+  <div>
+    <label id="lbl-last">Last Name</label>
+    <input type="text" aria-label="Last Name" data-automation-id="legalNameSection_lastName" required />
+  </div>
+  <div>
+    <label id="lbl-email">Email Address</label>
+    <input type="text" aria-label="Email Address" data-automation-id="email" required />
+  </div>
+  <div>
+    <label id="lbl-phone">Phone Number</label>
+    <input type="text" aria-label="Phone Number" data-automation-id="phone-number" />
+  </div>
+  <div>
+    <label id="lbl-city">City</label>
+    <input type="text" aria-label="City" data-automation-id="addressSection_city" />
+  </div>
+  <div>
+    <label id="lbl-resume">Resume/CV</label>
+    <input type="file" data-automation-id="file-upload-input-ref" required />
+  </div>
+  <div>
+    <label id="lbl-why">Why do you want to work here?</label>
+    <textarea aria-label="Why do you want to work here?" data-automation-id="freeFormQuestion"></textarea>
+  </div>
+  <button type="button" data-automation-id="bottom-navigation-next-button">Save and Continue</button>
+</div>

@@ -1,0 +1,8 @@
+Loading cached data from cache/resumecache_resume.json
+📊 RESUME EVALUATION RESULTS FOR: Kashif Manzer
+================================================================================
+🎯 OVERALL SCORE: 58.0/100
+(… pretty-printed detail elided …)
+===EVAL_JSON===
+{"scores": {"open_source": {"score": 5, "max": 35, "evidence": "only personal repos, no external contributions"}, "self_projects": {"score": 22, "max": 30, "evidence": "solid projects but missing live demo URLs"}, "production": {"score": 25, "max": 25, "evidence": "strong production experience"}, "technical_skills": {"score": 10, "max": 10, "evidence": "broad, relevant skill set"}}, "bonus_points": {"total": 2, "breakdown": "LinkedIn and GitHub present"}, "deductions": {"total": 6, "reasons": "project URLs missing"}, "key_strengths": ["Strong production experience", "Broad technical skills"], "areas_for_improvement": ["Add live demo URLs to projects", "Contribute to external open-source projects", "Publish technical blog posts"]}
+===END_EVAL_JSON===
